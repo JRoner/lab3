@@ -1,18 +1,21 @@
 import static org.junit.Assert.*;
 import org.junit.*;
+import java.util.ArrayList;
+
+
 
 public class ListTests {
 	@Test 
 	public void testMerge() {
-    List<Sting> input1 = {"hello", "world", "cse15l", "hello"};
+    String[] input1 = {"hello", "world", "cse15l", "hello"};
     String[] check = ListExamples.filter(input1,"hello");
     assertArrayEquals(new String[]{"hello", "hello"}, input1);
 	}
     
     @Test 
 	public void testFilter() {
-    int[] input1 = { 3 };
-    ArrayExamples.reverseInPlace(input1);
-    assertArrayEquals(new int[]{ 3 }, input1);
+        String[] input1 = {"hello", "world", "cse15l", "hello"};
+        String[] check = ListExamples.filter(input1,"hello");
+        assertArrayEquals(new String[]{"hello", "hello"}, input1);
 	}
 }
